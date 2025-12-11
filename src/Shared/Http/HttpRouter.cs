@@ -5,8 +5,6 @@ using System.Collections.Specialized;
 using System.Net;
 using System.Web;
 
-public delegate Task HttpMiddleware(HttpListenerRequest req, HttpListenerResponse res, Hashtable props, Func<Task> next);
-
 public class HttpRouter
 {
     public const int RESPONSE_NOT_SENT = 777;
@@ -141,7 +139,7 @@ public class HttpRouter
 
     public HttpRouter UseParameterizedRouteMatching()
     {
-        return Use(ParameterizedRouteMatching);
+        return Use(ParametrizedRouteMatching);
     }
 
     // ---------------------------------------------------------
