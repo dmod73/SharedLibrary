@@ -114,7 +114,7 @@ public static class HttpUtils
         Hashtable props,
         Func<Task> next)
     {
-        string rootDir = Configuration.Get("root.dir", Directory.GetCurrentDirectory())!;
+        string rootDir = Configuration.Get("wwwroot.dir", Directory.GetCurrentDirectory())!;
         string urlPath = req.Url!.AbsolutePath.TrimStart('/');
         string filePath = Path.Combine(rootDir, urlPath.Replace('/', Path.DirectorySeparatorChar));
 
